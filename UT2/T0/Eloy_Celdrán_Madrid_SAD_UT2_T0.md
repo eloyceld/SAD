@@ -178,7 +178,7 @@ La pantalla principal de búsqueda nos muestra **238** servicios en todo el mund
 	- Hay más que las anteriormente explicadas, pero las explicadas son de las más recientes, aún así las más antiguas siguen siendo relevantes ya que no han sido actualizadas
 - Puerto 443
 	- También posee las mismas vulnerabilidades
-	 ![](../../assets/UT2/T0/Shodan/VULNERA-PORT443--IP-port-80_country-US_has_vuln-true.png)
+	 ![](../../assets/UT2/T0/Shodan/VULNERA-PORT443.png)
 - A continuación explicaré algunas más centrándome en lo que se permite a través de la vulnerabilidad
 	- **Ejecución Remota de Código (RCE)**
 		- **CVE-2022-22720**: Permite la ejecución de código remoto en Apache HTTP Server debido a una validación incorrecta de entrada en ciertas configuraciones.
