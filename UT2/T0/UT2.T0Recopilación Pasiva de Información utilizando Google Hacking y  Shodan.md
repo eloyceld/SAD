@@ -10,39 +10,39 @@ https://www.hackthissite.org/
 site:hackthissite.org intext:"pride"
 ```
 - Este comando listará las páginas dentro del dominio `hackthissite.org` que mencionan específicamente "pride" en su contenido.
-![[Google Hacking/1.png]]
+![[Fotos/Google Hacking/1.png]]
 ### Buscar archivos PDF
 ```
 site:hackthissite.org filetype:pdf
 ```
 - Esta búsqueda mostrará únicamente archivos en formato PDF alojados en el dominio, lo cual es útil para encontrar documentación descargable.
-![[Google Hacking/2.png]]
+![[Fotos/Google Hacking/2.png]]
 
 ### Buscar términos relacionados con "security" o "vulnerability"
 ```
 site:hackthissite.org "security" OR "vulnerability"
 ```
 - Con esto obtendrás páginas donde se mencionan al menos uno de estos dos términos, ideal para encontrar secciones de educación en seguridad y vulnerabilidades.
-![[Google Hacking/6.png]]
+![[Fotos/Google Hacking/6.png]]
 ### Excluir resultados que contengan "foro" al buscar "tutorial"
 ```
 site:hackthissite.org "tutorial" -inurl:"forum"
 ```
 - Esta búsqueda te permite filtrar las páginas del foro y enfocarte en tutoriales que no estén dentro de esa sección específica.
-![[Google Hacking/3.png]]
+![[Fotos/Google Hacking/3.png]]
 ### Buscar páginas con "beginner" en el título y "challenge" en el contenido
 ```
 site:hackthissite.org intitle:"beginner" intext:"challenge"
 ```
 
 - Esto puede ayudarte a localizar retos de nivel principiante y encontrar información o guías en el contenido de esas páginas.
-![[Google Hacking/4.png]]
+![[Fotos/Google Hacking/4.png]]
 ### Buscar páginas que mencionen "Bitcoin" en el contenido.
 ```
 site:hackthissite.org intext:"criptografía"
 ```
 - Esto es útil para localizar desafíos o artículos que aborden temas de bitcoin.
-![[Google Hacking/5.png]]
+![[Fotos/Google Hacking/5.png]]
 ## Consulta con Google Dorks:
 ### Búsqueda de archivos que contienen credenciales de acceso de AWS
 > https://www.exploit-db.com/ghdb/8446
@@ -50,7 +50,7 @@ site:hackthissite.org intext:"criptografía"
 intext:"aws_access_key_id" | intext:"aws_secret_access_key" filetype:json | filetype:yaml
 ```
 - Este **Google Dork** es útil para **buscar archivos expuestos** que contienen **credenciales de AWS**, como el **`aws_access_key_id`** y **`aws_secret_access_key`**, en **archivos JSON** o **YAML**. Sin embargo, hay que ser consciente de las implicaciones éticas y legales de realizar búsquedas de este tipo, y usarlas siempre en un contexto controlado y legal.
-![[Google Dorks/1.png]]
+![[Fotos/Google Dorks/1.png]]
 
 ### Encontrar páginas web de la instalación de la versión 2 de PowerCMS, específicamente aquellas que tienen la página de instalación activa
 > https://www.exploit-db.com/ghdb/8402
@@ -58,14 +58,14 @@ intext:"aws_access_key_id" | intext:"aws_secret_access_key" filetype:json | file
 intitle:"Installation Wizard - PowerCMS v2"
 ```
 - Este tipo de búsqueda puede ser útil para identificar configuraciones mal aseguradas o vulnerabilidades en sitios web, pero debe realizarse siempre con responsabilidad y dentro de un contexto ético y legal.
-![[Google Dorks/2.png]]
+![[Fotos/Google Dorks/2.png]]
 ### Encontrar repositorios en GitHub que **contengan claves privadas de OpenSSH expuestas**.
 > https://www.exploit-db.com/ghdb/8451
 ```
 site:github.com "BEGIN OPENSSH PRIVATE KEY"
 ```
 - Cualquier persona que tenga acceso a ellas puede usarlas para **acceder a sistemas y servidores** de manera no autorizada.
-![[Google Dorks/3.png]]
+![[Fotos/Google Dorks/3.png]]
 ## Shodan
 ### country:FR "Apache"
 
@@ -74,7 +74,7 @@ site:github.com "BEGIN OPENSSH PRIVATE KEY"
 Cuando realizamos esta búsqueda en Shodan con los términos **"country:FR Apache"**, estamos solicitando al motor de búsqueda que muestre todos los dispositivos conectados a Internet que cumplan con los siguientes criterios:
 - **country:FR:** Esta parte de la consulta indica que deseas que Shodan se enfoque en dispositivos ubicados en Francia (FR es el código de país para Francia).
 - **Apache:** Este término hace referencia al servidor web Apache, uno de los servidores web más populares y utilizados en el mundo.
-![[Sodan/countryFR.APACHE.png]]
+![[Fotos/Sodan/countryFR.APACHE.png]]
 - La pantalla principal de búsqueda nos muestra **788,34** dispositivos/servicios en línea que coinciden con nuestra búsqueda
 - Ya que en la búsqueda hemos puesto "Country:FR" únicamente nos muestra resultados de Francia pero obtenemos una clasificación por ciudades de donde hay mayor cantidad de dispositivos que coinciden con nuestra búsqueda.
 	- Las ciudades donde se encontraron mas resultados son:
@@ -82,7 +82,7 @@ Cuando realizamos esta búsqueda en Shodan con los términos **"country:FR Apach
 	- Puertos más encontrados:
 		- 80, 443, 8080, 8081, 8443
 #### Ampliación de información
-![[Sodan/IP-APACHE-FR.png]]
+![[Fotos/Sodan/IP-APACHE-FR.png]]
 >
 >IP encontrada: [**193.48.96.60**](https://www.shodan.io/host/193.48.96.60)
 >Ubicación: **5 Quai François Mitterrand**
@@ -128,12 +128,12 @@ Cuando realizamos una búsqueda en Shodan con la consulta "port:22 Anonymous acc
 
 - **Puerto 22:** Este es el puerto estándar para el protocolo SSH (Secure Shell), que se utiliza para la conexión remota segura a sistemas.
 - **Anonymous access granted:** Esto indica que el servidor SSH permite a cualquier usuario conectarse sin necesidad de una cuenta o contraseña. En otras palabras, el **acceso es completamente abierto.**
-![[Sodan/PORT22-ANONYMOUS.png]]
+![[Fotos/Sodan/PORT22-ANONYMOUS.png]]
 La pantalla principal de búsqueda nos muestra **238** servicios en todo el mundo que coinciden con nuestra búsqueda
 - Las ciudades donde se encontraron mas resultados son:
 	- Alemania, Estados Unidos, Francia, Reino Unido, Japón
 #### Ampliación de información
-![[Sodan/IP-PORT22-ANONYMOUS.png]]
+![[Fotos/Sodan/IP-PORT22-ANONYMOUS.png]]
 >IP encontrada: [**181.214.240.68**](https://www.shodan.io/host/181.214.240.68)
 >Ubicación: Los Ángeles, Estados Unidos. 
 >ISP: **[aurologic GmbH](https://www.shodan.io/search?query=isp%3A%22aurologic+GmbH%22)**
@@ -146,7 +146,7 @@ La pantalla principal de búsqueda nos muestra **238** servicios en todo el mund
 	- Restringe los resultados a dispositivos ubicados en los Estados Unidos (US).
 - has_vuln:true
 	- Filtra para mostrar únicamente dispositivos que tienen vulnerabilidades conocidas asociadas. Esto significa que Shodan ha identificado que el servicio o dispositivo reportado tiene una o más vulnerabilidades basadas en datos de CVE (Common Vulnerabilities and Exposures).
-![[Sodan/port-80 country-US has_vuln-true.png]]
+![[Fotos/Sodan/port-80 country-US has_vuln-true.png]]
 - La pantalla principal de búsqueda nos muestra **21,255** dispositivos en Estados Unidos que tienen el puerto 80 abierto y vulnerabilidades conocidas.
 - Ya que en la búsqueda hemos puesto "Country:US" únicamente nos muestra resultados de Estados Unidos pero obtenemos una clasificación por ciudades de donde hay mayor cantidad de dispositivos que coinciden con nuestra búsqueda.
 	- Las ciudades donde se encontraron mas resultados son:
@@ -159,7 +159,7 @@ La pantalla principal de búsqueda nos muestra **238** servicios en todo el mund
 		- 443 (Puerto HTTPS): 15,814 dispositivos
 		- 8081, 4000, 8083, 8443, etc.
 #### Ampliación de información 
-![[Sodan/IP-port-80 country-US has_vuln-true.png]]
+![[Fotos/Sodan/IP-port-80 country-US has_vuln-true.png]]
 >IP encontrada: [147.182.138.246](https://www.shodan.io/host/147.182.138.246)
 >Ubicación: North Bergen, Estados Unidos.
 >ISP: [DigitalOcean, LLC](https://www.shodan.io/search?query=isp%3A%22DigitalOcean%2C+LLC%22)
@@ -167,7 +167,7 @@ La pantalla principal de búsqueda nos muestra **238** servicios en todo el mund
 - Puerto 80
 	- Posee más de 68 vulnerabilidades
 		- Estas son vulnerabilidades recientes (2022-2024) que afectan comúnmente servidores y servicios web, y que suelen permitir desde escalación de privilegios hasta denegación de servicio o ejecución remota de código.
-	 ![[Sodan/VULNERA-PORT80 -- IP-port-80 country-US has_vuln-true.png]]
+	 ![[Fotos/Sodan/VULNERA-PORT80 -- IP-port-80 country-US has_vuln-true.png]]
 - Estas son algunas de las más recientes con una breve explicación.
 	- **CVE-2024-40898** (2024):
 		- Vulnerabilidad de **Apache** que permite a atacantes ejecutar código arbitrario debido a una deserialización insegura. Esto significa que un atacante puede inyectar código malicioso que el servidor interpreta y ejecuta.
@@ -178,7 +178,7 @@ La pantalla principal de búsqueda nos muestra **238** servicios en todo el mund
 	- Hay más que las anteriormente explicadas, pero las explicadas son de las más recientes, aún así las más antiguas siguen siendo relevantes ya que no han sido actualizadas
 - Puerto 443
 	- También posee las mismas vulnerabilidades
-	 ![[Sodan/VULNERA-PORT443 -- IP-port-80 country-US has_vuln-true.png]]
+	 ![[Fotos/Sodan/VULNERA-PORT443 -- IP-port-80 country-US has_vuln-true.png]]
 - A continuación explicaré algunas más centrándome en lo que se permite a través de la vulnerabilidad
 	- **Ejecución Remota de Código (RCE)**
 		- **CVE-2022-22720**: Permite la ejecución de código remoto en Apache HTTP Server debido a una validación incorrecta de entrada en ciertas configuraciones.
