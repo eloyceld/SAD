@@ -11,7 +11,7 @@ Utilizando la herramienta [CertUtil](https://learn.microsoft.com/es-es/windows-s
 que tengas disponible en tu ordenador (puede ser un archivo de texto
 pequeño o cualquier archivo que elijas).
 #### Resultados Powershell MD5
-![](../../../../assets/UT3/T0/Windows/1.png)
+![](../../assets/UT3/T0/Windows/1.png)
 Hash obtenido con el comando 
 ```
 Get-FileHash -Algorithm MD5 .\odoo_18.0.latest.exe
@@ -19,7 +19,7 @@ Get-FileHash -Algorithm MD5 .\odoo_18.0.latest.exe
 Hash: 8217CC3F2FB082766039DF0E967078F0
 ```
 #### Resultados Powershell SHA256
-![](../../../../assets/UT3/T0/Windows/2.png)
+![](../../assets/UT3/T0/Windows/2.png)
 Hash obtenido con el comando: 
 ```
 Get-FileHash -Algorithm SHA256 .\odoo_18.0.latest.exe
@@ -31,20 +31,20 @@ Hash: 4F5312A71C83372A271D5BCE3090901EBF93DAE8326777929BC4DE7603A226CB
 #### ¿Qué es QuickHash GUI?
 [**QuickHash GUI**](https://www.quickhash-gui.org/) es una aplicación de software multiplataforma que permite realizar cálculos de valores hash de manera rápida y sencilla a través de una interfaz gráfica de usuario.
 #### Resultado obtenido MD5 QuickHash
-![](../../../../assets/UT3/T0/Windows/3.png)
+![](../../assets/UT3/T0/Windows/3.png)
 En esta aplicación al tener interfaz grafica no se ha realizado ningún comando y he utilizado MD5, claramente con otro .exe en este caso el de GitKraken
 ```
 Hash Obtenido:
 8544C8D3138C38945A8CF039F79C5B1F
 ```
 #### Resultado obtenido SHA256 QuickHash
-![](../../../../assets/UT3/T0/Windows/4.png)
+![](../../assets/UT3/T0/Windows/4.png)
 ```
 Hash Obtenido:
 AE2ED227ABE877193B95479E6E7599ED1E93848CA6276685F9C67FAE34281928
 ```
 #### Resultado obtenido SHA-1 QuickHash
-![](../../../../assets/UT3/T0/Windows/sha-1.png)
+![](../../assets/UT3/T0/Windows/sha-1.png)
 ```
 Hash Obtenido:
 A63284F655C57F1F32F3281D2C0810EBCD4F7BF5
@@ -64,14 +64,14 @@ calcula el hash de un archivo usando los siguientes comandos:
 -  Copia y pega en el informe los comandos utilizados y los resultados
 obtenidos.
 #### Resultado obtenido md5sum LICENSE
-![](../../../../assets/UT3/T0/Ubuntu/1.png)
+![](../../assets/UT3/T0/Ubuntu/1.png)
 ```
 md5sum LICENSE
 84dcc94da3adb52b53ae4fa38fe49e5d
 ```
 Esta vez el archivo elegido a sido un .txt 
 #### Resultado obtenido sha256sum LICENSE
-![](../../../../assets/UT3/T0/Ubuntu/2.png)
+![](../../assets/UT3/T0/Ubuntu/2.png)
 ```
 sha256sum LICENSE
 589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2
@@ -83,9 +83,9 @@ if [ "$(sha256sum "Archivo descargado" | awk '{print $1}')" = "HASH_ESPERADO" ];
 ```
 - "Archivo descargado"= ruta de la ISO descargada 
 - "HASH_ ESPERADO"= El hash que obtienes en la pagina web
-![](../../../../assets/UT3/T0/Ubuntu/3.png)
+![](../../assets/UT3/T0/Ubuntu/3.png)
 Podemos comprobar que nos muestra por salida que los hash son iguales.
-![](../../../../assets/UT3/T0/Ubuntu/4.png)
+![](../../assets/UT3/T0/Ubuntu/4.png)
 ## Comparación de Algoritmos
 ### ¿Por que los algoritmos **MD5** y **SHA-1** ya no son recomendados para las aplicaciones críticas?
 Los algoritmos MD5 y SHA-1 ya no se consideran seguros para aplicaciones críticas debido a **vulnerabilidades criptográficas** que permiten realizar ataques como la **colisión** y la **preimagen**. Estos ataques comprometen la integridad de los datos al generar el mismo hash para dos entradas diferentes o encontrar una entrada que coincida con un hash específico.
